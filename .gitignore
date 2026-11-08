@@ -1,0 +1,40 @@
+# Build output and dependencies — never part of this repository
+build/
+dist/
+node_modules/
+.gradle/
+.kotlin/
+*.hprof
+*.iml
+.idea/
+.vscode/
+
+# Release binaries belong to the Releases tab, not to git
+*.apk
+*.aab
+*.exe
+*.msi
+*.dmg
+*.so
+*.dll
+*.zip
+
+# Secrets — must never be committed
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+.env
+.env.*
+!/.env.example
+*.db
+*.sqlite
+*.sqlite3
+
+# Backups and OS noise
+*.bak-*
+*.bak
+.DS_Store
+Thumbs.db
+desktop.ini

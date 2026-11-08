@@ -1,473 +1,277 @@
-# 🚀 iRolixBot
-
 <div align="center">
 
-<div style="background: white; padding: 20px; border-radius: 12px; display: inline-block; margin: 20px 0;">
-<img src="iRolix%20Logo/iRolix%20Logo.png" alt="iRolix Logo" style="max-width: 300px; display: block;">
-</div>
+<img src="screenshots/logo.png" width="112" alt="MitzuVPN">
 
-| [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/iitzSeriZdev/iRolixBot) [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) [![PHP](https://img.shields.io/badge/PHP-8.2%2B-7777BB?logo=php)](https://php.net) ⚡ **Advanced Telegram VPN Sales Bot with Admin Panel**
+# MitzuVPN
 
-**The Ultimate Solution for VPN Service Providers**
+**Fast. Private. Always on.**
 
-Transform your VPN business with a powerful, feature-rich Telegram bot that automates sales, manages users, and streamlines your operations.
+A one-tap VPN for **Android** and **Windows**, built for networks where others stop working.
 
-[English](#) • [فارسی](README.fa.md) • [中文](README.zh.md) • [Русский](README.ru.md)
+[**Download the latest version**](../../releases/latest) &nbsp;·&nbsp; [فارسی](README.fa.md) &nbsp;·&nbsp; [Telegram](https://t.me/MitzuVPN) &nbsp;·&nbsp; [mitzuui.com](https://mitzuui.com)
 
-[🌟 Star](https://github.com/iitzSeriZdev/iRolixBot) • [🐛 Report Bug](https://t.me/iRolix_Bot/8) • [💡 Request Feature](https://t.me/iRolix_Bot/10) • [📖 Documentation](#-documentation)
+<img src="screenshots/en-home.png" width="200" alt="Home"> <img src="screenshots/en-locations.png" width="200" alt="Locations"> <img src="screenshots/en-speed-test.png" width="200" alt="Speed test"> <img src="screenshots/en-themes.png" width="200" alt="Themes">
 
 </div>
 
----
-
-## 📋 Table of Contents
-
-- [✨ Features](#-features)
-- [🎯 Key Highlights](#-key-highlights)
-- [📦 Requirements](#-requirements)
-- [🚀 Quick Start](#-quick-start)
-- [⚙️ Configuration](#️-configuration)
-- [🌐 VPN Panel Support](#-vpn-panel-support)
-- [💳 Payment Gateways](#-payment-gateways)
-- [🔒 Security](#-security)
-- [📚 Documentation](#-documentation)
-- [💬 Support & Community](#-support--community)
-- [💰 Support Development](#-support-development)
-- [📄 License](#-license)
+> **Latest release: 1.2.4** &nbsp;·&nbsp; [what's new in this version](RELEASE-NOTES-v1.2.4.md)
 
 ---
 
-## ✨ Features
+## Contents
 
-### 🤖 Bot Features
-
-- **📱 Subscription Management**
-  - Purchase subscriptions (type, volume, duration)
-  - Service renewal and extension
-  - Extra volume and days purchase
-  - Test service (one-time)
-  - Service information and details
-
-- **👥 User Management**
-  - User account information
-  - Transaction history
-  - Referral statistics
-  - Balance management
-
-- **💳 Payment System**
-  - Multiple payment gateways (Zarinpal, Card-to-Card, and more)
-  - Automatic payment processing
-  - Invoice management
-  - Payment verification
-
-- **🎁 Referral Program**
-  - Unique referral links
-  - Customizable commission (percentage/fixed)
-  - Automatic payout
-  - Referral statistics
-
-- **🎫 Support System**
-  - Ticket-based support
-  - Admin notifications
-  - Message forwarding
-
-### 👨‍💼 Admin Features
-
-- **📊 In-Bot Admin Panel**
-  - User management
-  - Service management
-  - Product management
-  - Panel management
-  - Logs and statistics
-  - Settings configuration
-
-- **🌐 Web Admin Panel**
-  - Complete dashboard with statistics
-  - User management interface
-  - Service management
-  - Product management
-  - VPN panel management
-  - Invoice management
-  - Referral system management
-  - Security monitoring
-  - Comprehensive logging
-  - Multi-language support (English, Persian, Chinese, Russian)
-
-### 🔒 Security Features
-
-- **🛡️ Anti-Spam System**
-  - Configurable click rate limits
-  - Automatic mute functionality
-  - Time-based restrictions
-
-- **🚨 Anti-Fraud System**
-  - Admin activity monitoring
-  - Automatic access revocation
-  - Suspicious activity detection
-
-- **📊 Security Monitoring**
-  - IP tracking
-  - Browser and OS detection
-  - Country detection
-  - Activity logging
-
-- **🔐 Additional Security**
-  - Telegram IP verification
-  - SQL injection prevention
-  - XSS protection
-  - CSRF protection
-  - Rate limiting
-  - Secure session management
+- [Features](#features)
+- [Download](#download)
+- [Install on Android](#install-on-android)
+- [Install on Windows](#install-on-windows)
+- [Browser extension](#browser-extension)
+- [iPhone and other apps](#iphone-and-other-apps)
+- [Getting started](#getting-started)
+- [Free and Premium](#free-and-premium)
+- [Inside the app](#inside-the-app)
+- [Questions](#questions)
+- [Support](#support)
 
 ---
 
-## 🎯 Key Highlights
-
-- ✅ **Multi-Language Support** - Full support for English, Persian, Chinese, and Russian
-- ✅ **Dual Bot Architecture** - PHP bot for shared hosting, Python bot for VPS
-- ✅ **Multiple VPN Panels** - Support for 12+ VPN panel types
-- ✅ **Payment Gateways** - Integration with Iranian and international payment gateways
-- ✅ **Automated Installation** - One-click installation for both hosting types
-- ✅ **Professional Admin Panel** - Web-based admin panel with modern UI
-- ✅ **Advanced Security** - Anti-spam, anti-fraud, and comprehensive monitoring
-- ✅ **Referral System** - Complete referral and affiliate program
-- ✅ **QR Code Generation** - Custom QR codes with background images
-
----
-
-## 📦 Requirements
-
-### Server Requirements
-
-**For PHP Bot (Shared Hosting):**
-- PHP >= 8.1
-- MySQL/MariaDB >= 5.7
-- Apache/Nginx with mod_rewrite
-- cURL extension
-- PDO MySQL extension
-- mbstring extension
-- GD extension (for QR codes)
-- BCMath extension
-- Write permissions for logs and uploads
-
-**For Python Bot (VPS):**
-- Python 3.9+
-- MySQL/MariaDB >= 5.7
-- Nginx (recommended)
-- Systemd (for service management)
-
-### PHP Extensions
-
-- `pdo_mysql` - Database connection
-- `curl` - HTTP requests
-- `json` - JSON processing
-- `mbstring` - Multibyte string handling
-- `gd` - Image processing (QR codes)
-- `bcmath` - Mathematical operations
-
-### PHP Libraries (Composer)
-
-- `endroid/qr-code` ^4.0 - QR code generation
-- `guzzlehttp/guzzle` ^7.0 - HTTP client
-
----
-
-## 🚀 Quick Start
-
-### 📦 Automated Installation (Recommended)
-
-#### For Shared Hosting
-
-1. Upload all project files to your hosting
-2. Navigate to: `https://yourdomain.com/installer/host/install.php`
-3. Follow the installation wizard:
-   - Step 1: Check requirements
-   - Step 2: Configure database
-   - Step 3: Configure bot
-   - Step 4: Automatic installation
-   - Step 5: Complete!
-
-#### For VPS (Ubuntu/Debian)
-
-```bash
-# Install with one command
-sudo bash <(curl -sSL https://raw.githubusercontent.com/iitzSeriZdev/iRolixBot/main/installer/vps/install.sh) install
-
-# Uninstall with backup
-sudo bash <(curl -sSL https://raw.githubusercontent.com/iitzSeriZdev/iRolixBot/main/installer/vps/install.sh) uninstall-with-backup
-
-# Update directly
-sudo bash <(curl -sSL https://raw.githubusercontent.com/iitzSeriZdev/iRolixBot/main/installer/vps/install.sh) update
-```
-
-**After installation:**
-
-1. Database credentials are saved to `/tmp/irolix_db_config`
-2. Edit `/opt/iRolixBot/bot-php/config.php` to add your bot token
-3. Access the panel at `http://YOUR_SERVER_IP/web-panel`
-4. Complete the setup through the web interface
-
-### 📦 Manual Installation
-
-If you prefer manual installation:
-
-#### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/iitzSeriZdev/iRolixBot.git
-cd iRolixBot
-```
-
-#### Step 2: Install Dependencies
-
-```bash
-cd bot-php
-composer install
-```
-
-#### Step 3: Setup Database
-
-Create a MySQL/MariaDB database and note the credentials.
-
-#### Step 4: Create Telegram Bot
-
-1. Message @BotFather on Telegram
-2. Use `/newbot` to create your bot
-3. Save the bot token securely
-
-#### Step 5: Run Installation
-
-1. Upload files to your web server
-2. Visit `installer/host/install.php` in your browser
-3. Follow the intuitive installation wizard:
-   - Choose your language
-   - Enter database details
-   - Configure bot token
-   - Set up admin account
-   - Complete installation
-
-#### Step 6: Setup Cron Jobs
-
-Configure **just one cron job**:
-
-```bash
-* * * * * /usr/bin/php /path/to/iRolixBot/bot-php/cron/cron.php >> /path/to/iRolixBot/Logs/cron_output.log 2>&1
-```
-
-Or use HTTP:
-
-```bash
-* * * * * curl -s https://yourdomain.com/bot-php/cron/cron.php > /dev/null 2>&1
-```
-
-**That's it!** The centralized manager handles everything automatically. 🎉
-
----
-
-## ⚙️ Configuration
-
-After installation, customize your bot:
-
-1. **🔌 VPN Panels** - Connect your panels
-2. **💳 Payment Gateways** - Setup payment methods
-3. **⚙️ Bot Settings** - Customize behavior
-4. **👥 Users** - Manage customers
-5. **🛍️ Products** - Create offerings
-6. **📁 Categories** - Organize products
-
----
-
-## ⏰ Cron Jobs
-
-### What Gets Executed Automatically?
-
-- **Every minute** ⚡ - Payments, notifications, messages
-- **Every 2 minutes** 🎁 - Gift system, config testing
-- **Every 3 minutes** 💰 - Payment gateway checks
-- **Every 5 minutes** 📊 - Payment expiration, reports
-- **Every 15 minutes** 🔍 - Status checks, monitoring
-- **Every 30 minutes** ⏳ - Agent expiration
-- **Every hour** 🎲 - Lottery system
-- **Every 5 hours** 💾 - Automatic backups
-
----
-
-## 🌐 VPN Panel Support
-
-### OpexCore Library Panels:
-- ✅ **Marzban** - Modern V2Ray/Xray panel
-- ✅ **Marzneshin** - Advanced VPN panel
-- ✅ **ovPanel** - OpenVPN panel
-- ✅ **Pasarguard** - Secure VPN panel
-- ✅ **Remnawave** - Wave VPN panel
-- ✅ **Guard Panel** - Security-focused panel
-
-### PHP-Based Panels:
-- ✅ **Ali Reza** - Popular Iranian panel
-- ✅ **Ali Reza Single Port** - Single port variant
-- ✅ **3x-ui** - Xray UI panel
-- ✅ **x-ui Single Port** - Single port Xray UI
-- ✅ **S-ui** - Simple UI panel
-- ✅ **Mikrotik** - RouterOS integration
-- ✅ **WGDashboard** - WireGuard dashboard
-- ✅ **Hiddify** - Hiddify panel
-- ✅ **Sanaei** - Sanaei panel
-
----
-
-## 💳 Payment Gateways
-
-### Iranian Gateways:
-- ✅ **Zarinpal** - Most popular Iranian gateway
-- ✅ **Nowpayment** - Modern payment gateway
-- ✅ **IranPay1** - Iranian payment gateway
-- ✅ **Aqayepardakht** - Payment gateway
-- ✅ **Card-to-Card** - Direct card transfer
-
-### International Gateways:
-- ✅ **Yoomoney** - Russian payment system
-- ✅ **Yookassa** - Yandex payment gateway
-- ✅ **Freekassa** - International gateway
-- ✅ **Heleket** - Payment gateway
-- ✅ **Robokassa** - Russian payment gateway
-- ✅ **Telegram Stars** - Telegram's payment system
-- ✅ **Cryptomus** - Cryptocurrency gateway
-- ✅ **CryptoPay** - Crypto payment gateway
-
----
-
-## 🔒 Security
-
-### Security Features
-
-- ✅ Telegram IP verification
-- ✅ SQL injection prevention (Prepared Statements)
-- ✅ XSS protection
-- ✅ CSRF protection
-- ✅ Rate limiting
-- ✅ Secure session management
-- ✅ Anti-spam system
-- ✅ Anti-fraud system
-- ✅ Security monitoring
-
-### Security Best Practices
-
-1. **After Installation:**
-   - Delete the `installer` directory
-   - Change default passwords
-   - Set up SSL/TLS certificate
-
-2. **Regular Maintenance:**
-   - Update dependencies regularly
-   - Review logs regularly
-   - Backup database regularly
-
-3. **Server Security:**
-   - Use strong passwords
-   - Enable firewall
-   - Keep system updated
-
-For detailed security information, see [SECURITY.md](SECURITY.md)
-
----
-
-## 📚 Documentation
-
-- 📖 [Installation Guide](HOST_INSTALLATION_GUIDE.md)
-- 🔒 [Security Guide](SECURITY.md)
-- ⏰ [Cron Setup](CRON_SETUP.md)
-- 📊 [Project Summary](PROJECT_SUMMARY_FOR_HOST.md)
-
----
-
-## 💬 Support & Community
-
-### Get Help
-
-- 💬 **Telegram Group**: [@iRolix_Bot](https://t.me/iRolix_Bot) - Join our community!
-- 🐛 **Bug Reports**: [Report an Issue](https://t.me/iRolix_Bot/8) - Help us improve!
-- 💡 **Suggestions**: [Share Ideas](https://t.me/iRolix_Bot/10) - Your ideas matter!
-
-### Follow the Developer
-
-- 🐙 **GitHub**: [@iitzSeriZdev](https://github.com/iitzSeriZdev)
-- 🎥 **YouTube**: [@iitzSeriZ](https://youtube.com/@iitzSeriZ)
-- 🐦 **X (Twitter)**: [@iitzSeriZ](https://x.com/iitzSeriZ)
-
----
-
-## 💰 Support Development
-
-### 🌟 Help Us Build the Future! 🌟
-
-**Your support makes all the difference in the world!**
-
-We're committed to making iRolixBot the best Telegram bot solution available. Your donations directly fuel faster development, exclusive features, and continuous improvements.
-
-### 🚀 Why Your Donation Matters
-
-Your generous donations enable us to:
-
-- ⚡ **Accelerate Development** - More donations = faster feature releases and updates
-- 🎯 **Build Exclusive Features** - Get access to cutting-edge capabilities
-- 🛠️ **Enhanced Support** - Priority support for our generous donors
-- 🌟 **Continuous Innovation** - Keep the project alive, thriving, and constantly evolving
-- 🔒 **Better Security** - Invest in security audits and improvements
-- 📚 **Comprehensive Documentation** - Create better guides and tutorials
-
-### 💎 The More You Give, The More You Get!
-
-**Every donation brings us closer to our goals!**
-
-- **Higher donations** = **Priority access** to new features
-- **Faster updates** = **More frequent releases** with bug fixes and improvements
-- **Exclusive features** = **Unique capabilities** that set iRolixBot apart
-- **Better support** = **Faster response times** and dedicated assistance
-
-### 💳 How to Donate
-
-Choose your preferred payment method:
-
-#### 💰 Cryptocurrency (Direct Transfer)
-
-| Currency    | Network                     | Address                                          |
-| ----------- | --------------------------- | ------------------------------------------------ |
-| 💵 **USDT** | BEP20 (Binance Smart Chain) | 0xCaF05b21A518E6750AA43aD87cEB4a725e78a850       |
-| 💎 **TON**  | The Open Network            | UQAg7NaXzzFMvGxqirO9UYwwzseq8pAi3N8fompkKjOFtIzl |
-| 💰 **TRX**  | Tron Network                | TPatJCKdLJs1ZpetLtpC97nsHg8X9G1KRs               |
-
-> ⚠️ **Important:** Make sure you're using the correct network when sending cryptocurrency!
-
-#### 💸 Online Payment (Recommended)
-
-**🌐 Donate via NowPayments**
-
-NowPayments accepts:
-- 💳 Credit/Debit Cards
-- 💰 100+ Cryptocurrencies
-- 🌍 Multiple payment methods
-- 🔒 Secure & Fast Processing
-
-**Every donation, no matter the size, helps us improve iRolixBot and bring you better features!** 🙏
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-You're free to use, modify, and distribute this project! 🎉
-
----
+## Features
+
+| | |
+|---|---|
+| 🌍 **Free network for everyone** | Connect for free with no setup. **Smart route** finds the way that works on your internet and remembers it. |
+| ⭐ **Premium servers** | Many countries, **Auto (fastest)** that pings every server and picks the best, dedicated **Trade** servers. |
+| 🛡️ **Modern protocols** | WireGuard, AmneziaWG, OpenVPN, Cisco, L2TP, IKEv2, VLESS (REALITY), VMess, Trojan and Shadowsocks, plus a **gaming mode** on Windows. |
+| 🔀 **Split tunneling** | Choose sites, IP ranges and apps (Android) or programs (Windows) that skip the VPN. |
+| 🛡️ **Protection** | Blocks ads, trackers, malware and phishing, or choose **Family** to also block adult sites. |
+| 🇮🇷 **Iranian sites without VPN** | Iranian sites and services open directly — faster, and banks and payment pages keep working. |
+| 🏠 **Local network** | Printers, TVs and casting keep working while you're connected. |
+| 🧯 **Kill switch** | On Windows, nothing leaves outside the VPN, even if the connection drops. On Android, use the system's *Always-on VPN*. |
+| 🔁 **Never stuck** | If a premium server doesn't answer, the app tries the next one by itself. |
+| ⭐ **Favorites & widget** | Star your servers, connect from a home-screen widget or a long-press shortcut (Android). |
+| ⏰ **Renewal reminder** | A gentle note a few days before your plan ends, with one tap to renew. |
+| 🧭 **Free DNS** | Ready-made DNS servers with live latency, free for every user. |
+| ⚡ **Speed test** | Download, upload, ping and jitter, through the VPN or without it — and share the result as a picture. |
+| 🎨 **8 colour themes** | Midnight, Ocean, Aurora, Sunset, Rose, Royal, Ember and Graphite, in light, dark or **pure black**. |
+| 🗣️ **10 languages** | English, فارسی, دری, پښتو, Türkçe, العربية, Русский, Тоҷикӣ, Türkmen, 中文. |
+| 💳 **Buy inside the app** | Pay by bank card or cryptocurrency; the plan activates by itself. |
+| 👛 **Wallet** | Your seller can put a balance on your account, in Toman; a plan can be paid straight from it, with no gateway and nothing to wait for. |
+| 🎁 **Gift codes** | Enter a code and its amount lands in your wallet. A code can be limited to certain accounts, to one use each, or to a date range. |
+| 💬 **Support built in** | Support tickets and an inbox for news, right inside the app. |
+| 🔔 **Updates** | The app tells you when a new version is out. |
+| 🧩 **Browser extension** | Premium accounts can protect Chrome, Edge, Opera, Brave or Vivaldi with one tap, without installing the app. |
 
 <div align="center">
-
-### Made with 💜 by iitzSeriZ
-
-**Star this repo if you find it helpful!** ⭐
-
-⭐ [Star](https://github.com/iitzSeriZdev/iRolixBot) • 🐛 [Report Bug](https://t.me/iRolix_Bot/8) • 💡 [Request Feature](https://t.me/iRolix_Bot/10) • 💸 [Donate](#-support-development)
-
-**#woman_life_freedom**
-
+<img src="screenshots/en-plans.png" width="200" alt="Plans"> <img src="screenshots/en-settings.png" width="200" alt="Settings"> <img src="screenshots/en-light.png" width="200" alt="Light theme"> <img src="screenshots/en-sign-in.png" width="200" alt="Sign in">
 </div>
+
+---
+
+## Download
+
+Get the files from the [**latest release**](../../releases/latest):
+
+| Device | File | Requirements |
+|---|---|---|
+| **Android** (any phone) | `MitzuVPN-x.y.z-universal.apk` | Android 7.0 or newer |
+| Android, modern phones (smaller download) | `MitzuVPN-x.y.z-arm64-v8a.apk` | 64-bit phones (almost every phone since 2017) |
+| Android, older phones | `MitzuVPN-x.y.z-armeabi-v7a.apk` | 32-bit phones |
+| Android on PC / Chromebook | `MitzuVPN-x.y.z-x86_64.apk` | Emulators, Chromebooks |
+| **Windows** | `MitzuVPN-Setup-x.y.z.exe` | Windows 10 or 11, 64-bit |
+
+> Not sure which Android file to take? Take **universal** — it works on every phone.
+
+Only download MitzuVPN from this page or from our Telegram channel [@MitzuVPN](https://t.me/MitzuVPN). The release page lists a `SHA256SUMS.txt` you can use to check a file.
+
+**Direct mirror (if GitHub is slow).** The same files for 1.2.4, hosted closer:
+
+| File | Link |
+|---|---|
+| Android universal | https://iran.mitzuui.com/dl/Android/MitzuVPN-1.2.4-universal.apk |
+| Android arm64-v8a | https://iran.mitzuui.com/dl/Android/MitzuVPN-1.2.4-arm64-v8a.apk |
+| Android armeabi-v7a | https://iran.mitzuui.com/dl/Android/MitzuVPN-1.2.4-armeabi-v7a.apk |
+| Android x86_64 | https://iran.mitzuui.com/dl/Android/MitzuVPN-1.2.4-x86_64.apk |
+| Windows | https://iran.mitzuui.com/dl/Windows/MitzuVPN-Setup-1.2.4.exe |
+
+> The mirror carries the current version; the [release page](../../releases/latest) always has the
+> newest files and the checksums that belong to them.
+
+---
+
+## Install on Android
+
+1. Download the APK on your phone and open it (from the notification or your **Downloads**).
+2. If Android asks, allow your browser or file manager to **install unknown apps**, then go back and tap **Install**.
+3. **If Google Play Protect shows a warning** (MitzuVPN is installed from outside Google Play, so Play Protect doesn't know it yet):
+   - **"Unsafe app blocked"** or **"App blocked to protect your device — Play Protect hasn't seen an app from this developer before"** → tap **More details** → **Install anyway**. It only means Google doesn't know MitzuVPN's developer yet.
+   - **"Send app for a security check?"** → tap **Send** (or **Scan app**). This helps Google learn that MitzuVPN is safe; the install continues.
+   - If there is no **Install anyway** button, open **Google Play Store → your profile picture → Play Protect → ⚙️**, turn off **Scan apps with Play Protect** for a moment, install MitzuVPN, then **turn it back on**.
+4. **Samsung phones:** if the install is refused with *Auto Blocker*, go to **Settings → Security and privacy → Auto Blocker**, turn it off, install, then turn it back on.
+5. Open MitzuVPN. The first time you connect, Android asks to allow a **VPN connection** — tap **OK**.
+
+**Tips for a steady connection**
+
+- Allow notifications when asked (Android 13+): the connection status lives there.
+- **Settings → Apps → MitzuVPN → Battery → Unrestricted** stops Android from closing the VPN in the background (on Xiaomi also turn on **Autostart**).
+
+**Updating:** install the new APK over the old one. Your account and settings stay.
+
+---
+
+## Install on Windows
+
+1. Download `MitzuVPN-Setup-x.y.z.exe` and run it.
+2. If **"Windows protected your PC"** appears, click **More info → Run anyway**.
+3. Allow the installer to make changes (administrator permission) — it installs the VPN service and network driver MitzuVPN needs.
+4. Open MitzuVPN from the Start menu or the desktop. It also sits in the system tray next to the clock.
+
+**Updating:** run the new installer; it replaces the old version and keeps your settings.
+**Removing:** **Settings → Apps → MitzuVPN → Uninstall**.
+
+---
+
+## Browser extension
+
+Premium accounts can protect a browser without installing the app. Only that browser goes through MitzuVPN; other programs on the computer don't.
+
+> The browser build is **not part of the 1.2.4 release** yet — the package below is the same extension, versioned separately. If you need it, ask in [@MitzuVPN](https://t.me/MitzuVPN).
+
+1. Download `MitzuVPN-x.y.z-chromium.zip` and **extract** it to a folder you keep, for example *Documents\MitzuVPN-browser*. Don't delete that folder later: the browser runs the extension from it.
+2. Open the extensions page: `chrome://extensions` (Chrome, Brave, Vivaldi), `edge://extensions` (Edge) or `opera://extensions` (Opera).
+3. Turn on **Developer mode** (top right; in Edge it is in the left menu).
+4. Click **Load unpacked** and choose the extracted folder (the one with `manifest.json` inside).
+5. Click the puzzle-piece icon on the toolbar and **pin** MitzuVPN. Open it and sign in with your username and password, or with your login QR: copy the QR picture and press **Ctrl+V** in the sign-in window (or use **Sign in with a QR code → Choose QR image**).
+
+One tap connects. **Locations** lists your servers with their latency and **Auto (fastest)**. **Settings** has the kill switch, WebRTC protection (hides your real IP from video calls and games), Iranian sites without VPN, local network access and your own sites that should open directly. The toolbar icon shows the country while you're connected.
+
+**Updating:** extract the new version into the same folder, then press ↻ on the MitzuVPN card in the extensions page.
+**Removing:** **Remove** on the same card.
+
+---
+
+## iPhone and other apps
+
+Premium accounts have a **subscription link**. Open **Account → Subscription link** in MitzuVPN (or ask your seller), copy it, and add it to any iPhone VPN app that accepts subscription links (for example *V2Box* or *Streisand*). Your servers appear there and stay up to date.
+
+---
+
+## Getting started
+
+<img src="screenshots/en-sign-in.png" width="200" align="right" alt="Sign in">
+
+1. Pick your **language**.
+2. **Sign in** with the username and password from your seller, or **scan the QR code** they gave you — or **create a free account**.
+3. Tap the big **power button**. When the globe shows your country's flag, you're protected.
+4. To choose a server or country, tap the **📍 location** button at the top.
+
+Keep your account safe with **Account → Two-step verification**, and see or sign out your devices in **Account → Signed-in devices**.
+
+<br clear="right">
+
+---
+
+## Free and Premium
+
+| | Free | Premium |
+|---|:---:|:---:|
+| Free network with Smart route | ✅ | ✅ |
+| Free DNS, ad blocker, speed test, themes | ✅ | ✅ |
+| Choose the exit country of the free network | ✅ *(when offered)* | ✅ |
+| Premium servers in many countries | — | ✅ |
+| **Auto (fastest)** and **Trade** servers | — | ✅ |
+| Subscription link for iPhone and other apps | — | ✅ |
+| More devices per account | — | ✅ |
+
+**Get Premium** in the **Plans** tab: choose a plan and pay by **bank card** (send the receipt in the app), by **cryptocurrency** (the app shows the address, the amount and a QR code), or from your **wallet balance** if your seller has topped it up. Your plan turns on by itself once the payment is confirmed.
+
+---
+
+## Inside the app
+
+**⚡ Speed test** — *Settings → Tools → Speed test* or the card on the home screen. Measure against Cloudflare or against the MitzuVPN server, through the VPN or without it. Tap **Share** to send the result as a picture (Android) or save it to *Pictures › MitzuVPN* (Windows). Your last tests stay in the list.
+
+**🎨 Appearance** — *Settings → Appearance*: light, dark or follow the system; **pure black** for OLED screens; and eight colour themes. Colours change smoothly as you pick.
+
+**🔀 Split tunneling** — *Settings → Split tunneling*: add sites (like `mybank.com`), IP ranges, and apps (Android) or programs (Windows) that should use your normal internet.
+
+**🛡️ Protection** — *Settings → Protection*: **Off**, **Ads** (ads, trackers, malware, phishing) or **Family** (also adult sites, with safe search). **🧭 Free DNS** — pick a DNS server with live latency from the home screen.
+
+**🇮🇷 Iranian sites without VPN** — *Settings* or *Split tunneling*: every `.ir` site, well-known Iranian services and Iran's IP addresses open directly, so local sites stay fast and banks, payment pages and government sites keep working.
+
+**🏠 Local network access** — *Settings*: printers, TVs, casting and shared folders stay reachable while you're connected.
+
+**🧯 Kill switch** — *Settings → Kill switch*. Windows: a switch in the app blocks everything outside the VPN, and keeps the internet closed if the connection drops until you connect again or tap disconnect. Android: opens the system's *Always-on VPN* and *Block connections without VPN* settings.
+
+**🔁 Try the next server** — on by default: if a premium server doesn't connect, the app moves on to the next one (same country first).
+
+**⭐ Favorites, widget and shortcuts** — tap the star next to a server to pin it at the top of *Locations*. On Android, add the MitzuVPN widget to your home screen, or long-press the app icon for *Connect*, *Locations* and *Speed test*.
+
+**🎮 Gaming (Windows)** — servers tagged **Gaming** connect through WireSock (the app installs it the first time) and can send only your games through the VPN, for the lowest ping.
+
+**👛 Wallet and gift codes** — the wallet holds a Toman balance your seller adds to. When the balance covers a plan, **Pay from wallet** is the first payment option in *Plans*, and the plan is active the moment you tap it. A **gift code** from your seller goes into the same balance: type it above the plans and the amount appears immediately. Codes can be limited to certain accounts, to a number of uses, or to a date range, and the app tells you which of those you hit.
+
+**ℹ️ About** — *Settings → About*: version, what's inside, support links, the terms of use and the open-source licences.
+
+<div align="center">
+<img src="screenshots/en-speed-test.png" width="200" alt="Speed test"> <img src="screenshots/en-themes.png" width="200" alt="Themes"> <img src="screenshots/en-about.png" width="200" alt="About"> <img src="screenshots/windows-home.png" width="200" alt="Windows">
+</div>
+
+---
+
+## Questions
+
+<details>
+<summary><b>Is MitzuVPN safe? Why does Play Protect warn about it?</b></summary>
+
+Play Protect warns about apps it hasn't seen from Google Play before, not because it found anything harmful. MitzuVPN doesn't read your messages, contacts or files and doesn't ask for any such permission. Only download it from this page or our Telegram channel.
+</details>
+
+<details>
+<summary><b>It doesn't connect. What can I try?</b></summary>
+
+- Free network: in **Locations → Mitzu Free → Connection method**, choose **Custom** and try another method, or pick another exit country.
+- Premium: try **Auto (fastest)**, or another protocol (WireGuard, AmneziaWG, VLESS, OpenVPN or Cisco) in the locations list.
+- Turn off other VPN or proxy apps; on Windows, check your antivirus didn't block MitzuVPN.
+- Still stuck? Open **Settings → Support tickets** and tell us what you see.
+</details>
+
+<details>
+<summary><b>It says my account is open on another device.</b></summary>
+
+Each plan allows a set number of devices. The app asks whether to sign the other device out; you can also manage them in **Account → Signed-in devices**.
+</details>
+
+<details>
+<summary><b>The connection drops when my screen is off (Android).</b></summary>
+
+Set **Battery → Unrestricted** for MitzuVPN (and **Autostart** on Xiaomi), and keep the MitzuVPN notification on.
+</details>
+
+<details>
+<summary><b>Which Android file should I download?</b></summary>
+
+**universal** works everywhere. **arm64-v8a** is smaller and fits almost every phone from the last few years.
+</details>
+
+<details>
+<summary><b>I have a gift code. Where do I enter it?</b></summary>
+
+Open the **Plans** tab and type it into the **Gift code** field above the plans, then tap **Redeem**. The amount is added to your wallet at once and shows up as a **Pay from wallet** option. Codes only accept English letters, digits and the dash — Persian digits are converted as you type, and Persian letters are simply not entered. If a code does not work, the app says why: unknown, switched off, expired, not for your account, already used, or used up.
+</details>
+
+<details>
+<summary><b>How do I renew or upgrade?</b></summary>
+
+Open the **Plans** tab and buy again — the days and data are added to your account.
+</details>
+
+---
+
+## Support
+
+- Telegram channel and support: [**@MitzuVPN**](https://t.me/MitzuVPN)
+- Website: [**mitzuui.com**](https://mitzuui.com)
+- In the app: **Settings → Support tickets**
+
+By using MitzuVPN you agree to its terms of use, shown in the app under **Settings → About → Terms of use**.
+
+<div align="center"><sub>© MitzuVPN</sub></div>
