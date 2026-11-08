@@ -14,9 +14,9 @@
 
 </div>
 
-> **آخرین نسخه: 1.2.4** &nbsp;·&nbsp; [تغییرات این نسخه](RELEASE-NOTES-v1.2.4.md)
-
 <div dir="rtl">
+
+> **آخرین نسخه: 1.2.4** &nbsp;·&nbsp; [تغییرات این نسخه](RELEASE-NOTES-v1.2.4.md)
 
 ---
 
